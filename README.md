@@ -1,78 +1,78 @@
 # hello-CORBA
 A distributed client-server "Hello World" implementation in different languages  using CORBA
 
-These examples were created with the following dependencies:
+These examples were created with the following dependencies:  
 
-Java - from 1.6 to 1.8
-Python - 2.7
-omniORB - 4.2.3
-Maven - 3.6.2
-make
+Java - from 1.6 to 1.8  
+Python - 2.7  
+omniORB - 4.2.3  
+Maven - 3.6.2  
+make  
 
-Run tnameserv:
+###### Run tnameserv:  
 
-```console
-$ orbd -ORBInitialPort 1050 -ORBDInitialHost localhost
+```console  
+$ orbd -ORBInitialPort 1050 -ORBDInitialHost localhost  
+```  
+For running the project in different machines, replace every instance of "localhost" with the server host's IP address  
+
+## JAVA
+
+Compile the source code  
+If you don't have any Java IDE installed make sure to have maven and use the terminal to compile the code  
+From HelloJava directory on the terminal run:  
+```console  
+$ mvn clean package  
 ```
-For running the project in different machines, replace every instance of "localhost" with the server host's IP address
+###### Run Java Server  
 
-##JAVA
-
-Compile the source code
-If you don't have any Java IDE installed make sure to have maven and use the terminal to compile the code
-From HelloJava directory on the terminal run:
-```console
-$ mvn clean package
+From HelloJava directory on the terminal run:  
+```console  
+$ java HelloApp.HelloServer  
+```  
+if you have any issues regarding classpath as "Could not find or load main class..." try  
+```console  
+$ java -cp target/HelloJava-1.0-SNAPSHOT.jar HelloApp.HelloServer  
 ```
-######Run Java Server
+###### Run Java Client  
 
-From HelloJava directory on the terminal run:
-```console
-$ java HelloApp.HelloServer
-```
-if you have any issues regarding classpath as "Could not find or load main class..." try
-```console
-$ java -cp target/HelloJava-1.0-SNAPSHOT.jar HelloApp.HelloServer
-```
-######Run Java Client
-
-From HelloJava directory on the command line
-```console
-$ java HelloApp.HelloClient
-```
-if you have any issues regarding classpath as "Could not find or load main class..." try
-```console
-$ java -cp target/HelloJava-1.0-SNAPSHOT.jar HelloApp.HelloClient
-```
-
-##PYTHON
-
-######Run Python Server
-
-From HelloPython directory on the terminal run:
-```console
-$ python2 HelloServer.py
-```
-######Run Python Client
-```console
-$ python2 HelloClient.py
+From HelloJava directory on the command line  
+```console  
+$ java HelloApp.HelloClient  
+```  
+if you have any issues regarding classpath as "Could not find or load main class..." try  
+```console  
+$ java -cp target/HelloJava-1.0-SNAPSHOT.jar HelloApp.HelloClient  
 ```
 
-##C++
+## PYTHON  
 
-Compile the source code
-From HelloCpp directory on the terminal run:
-```console
-$ make
-```
-######Run C++ Client
-```console
-$ ./client
-```
+###### Run Python Server  
 
-You can run server and client in any language interchangeably
+From HelloPython directory on the terminal run:  
+```console  
+$ python2 HelloServer.py  
+```  
+###### Run Python Client  
+```console  
+$ python2 HelloClient.py  
+```  
 
-##Resources:
+## C++  
+
+Compile the source code  
+From HelloCpp directory on the terminal run:  
+```console  
+$ make  
+```  
+###### Run C++ Client  
+```console  
+$ ./client  
+```  
+
+You can run server and client in any language interchangeably  
+
+## Resources:  
 
 https://docs.oracle.com/javase/7/docs/technotes/guides/idl/INStutorial.html
 http://www.upi.pr.it/docs/jagsa/jaggsntp14.htm
