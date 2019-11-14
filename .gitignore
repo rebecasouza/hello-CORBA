@@ -1,0 +1,6 @@
+**/.DS_Store
+.java-version
+HelloJava/bin
+HelloJava/target
+orb.db
+HelloCpp/*.o
